@@ -28,10 +28,7 @@ yarn add -D morgan @types/morgan @types/express @types/mongoose @types/cors @typ
 
 Since this is a small application we are going to use just the mongoose models, for these entities:
 
-<br>
-
 <img style="border-radius: 0.4rem; max-width: " src="./docs/database-modeling.png" >
-<br></br>
 
 ### **src/database/models/customer.ts**
 
@@ -90,7 +87,6 @@ export const Order = model('Order', orderSchema)
 ## Database connection
 
 To connect to database we are going to use the URL environment variable, that we can defined in a .env file as you can see in the .env.example file.
-<br></br>
 
 ### **src/database/connection.ts**
 
@@ -110,7 +106,6 @@ export function connectDatabase() {
 ## Controllers - Handling the requests
 
 Controllers have the responsability of handle the requests sent by the client, but we also gonna implement the functionality since this is a simple app
-<br></br>
 
 ### **src/http/controllers/customer.controller.ts**
 
@@ -283,8 +278,6 @@ export async function closeOrder(req: e.Request, res: e.Response, next: e.NextFu
 
 The use of middleware in this project is just to verify if the order is valid handle errors and setup app configs
 
-<br/>
-
 ### **src/http/middlewares/order.middleware.ts**
 
 ```typescript
@@ -329,7 +322,6 @@ export function errorHandler(error: any, req: Request, res: Response, next: Next
 
 ## Applying middleware to express application
 
-<br>
 
 ### **src/http/middlewares/index.ts**
 
@@ -351,7 +343,6 @@ export function setupMiddleware(app: e.Application) {
 
 ## Routing - Applying the controllers and middlewares to each endpoint
 
-<br>
 
 ### **src/http/routers/customer.router.ts**
 
@@ -415,8 +406,6 @@ orderRouter
 
 ## Applying the routers to express application
 
-<br>
-
 ### **src/http/routers/index.ts**
 
 ```typescript
@@ -434,7 +423,6 @@ export function setupRoutes(app: e.Application) {
 
 ## Setup express application and start function
 
-<br>
 
 ### **src/http/server.ts**
 
@@ -459,8 +447,6 @@ export function start() {
 #
 
 ## Initialize application and services
-
-<br>
 
 ### **src/index.ts**
 
