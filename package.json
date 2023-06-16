@@ -1,0 +1,26 @@
+{
+  "name": "express-mongoose-api-starter",
+  "version": "1.0.0",
+  "author": {
+    "name": "henrique-gn"
+  },
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "start:dev": "tsx watch src/index.ts",
+    "build": "tsup src --format cjs,esm --dts --minify --clean --legacy-output dist/index.js",
+    "test": "vitest",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.3",
+    "prettier": "^2.8.8",
+    "tsup": "^6.7.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4",
+    "axios": "^1.4.0",
+    "vitest": "^0.31.0"
+  },
+  "dependencies": {}
+}
