@@ -9,7 +9,7 @@ This project aims to showcase some of the express and mongoose features, such as
 Clone the starter branch of this repository
 
 ```bash
-git clone -b starter https://github.com/henrique-gn/express-mongoose-api.git
+git clone -b starter https://github.com/henrique-gn/express-mongoose-api.git .
 ```
 
 Install the depedencies
